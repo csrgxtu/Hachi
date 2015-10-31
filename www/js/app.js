@@ -6,11 +6,6 @@
 angular.module('starter', ['ionic'])
 
 .run(function($ionicPlatform) {
-  // ionic.Platform.ready(function() {
-  //   // hide the status bar using the StatusBar plugin
-  //   StatusBar.hide();
-  // });
-
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -20,7 +15,6 @@ angular.module('starter', ['ionic'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
-
-    StatusBar.hide();
+    StatusBar.hide()
   });
 })
