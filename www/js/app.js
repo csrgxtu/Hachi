@@ -15,6 +15,5 @@ angular.module('starter', ['ionic'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
-    StatusBar.hide()
   });
 })
