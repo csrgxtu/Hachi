@@ -15,5 +15,15 @@ angular.module('starter', ['ionic'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+    StatusBar.hide();
   });
 })
+
+.controller('LoginCtrl', function($scope) {
+  console.log("entering LoginCtrl");
+
+  $scope.Login = function() {
+    console.log("login btn click");
+  }
+
+});

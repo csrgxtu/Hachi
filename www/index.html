@@ -20,15 +20,39 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/Hachi.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="Login" ng-controller="LoginCtrl">
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
+    <div class="doc-example ionic">
+      <div class="bar bar-header">
+        <div class="h1 title">Hachi</div>
+      </div>
+      <div class="content has-header">
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" id="Username" placeholder="Username">
+          </label>
+          <label class="item item-input">
+            <input type="text" id="Password" placeholder="Password">
+          </label>
+          <button class="button button-block button-positive" ng-click="Login()">Login</button>
+          <center>
+            <h4>or</h4>
+          </center>
+          <button class="button button-block button-dark">
+            Signup
+          </button>
+        </div>
+        <div class="padding">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- <div class="bar bar-footer bar-light">
+      <div class="title">Github</div>
+    </div> -->
+
   </body>
 </html>
