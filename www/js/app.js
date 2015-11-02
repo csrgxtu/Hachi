@@ -19,12 +19,28 @@ angular.module('Login', ['ionic'])
   });
 })
 
-.controller('LoginCtrl', function($scope, $elem, $http) {
+.controller('LoginCtrl', function($scope, $http, $window) {
 
   $scope.Login = function() {
-    console.log("login btn click");
-    var Username = $elem.find('Username');
-    console.log(Username);
+    console.log("LoginCtrl.Login");
+    var Username = $scope.Username;
+    var Password = $scope.Password;
+
+    var conf = {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      url: 'http://192.168.10.7:8000/auth',
+      data: {
+        Username: Username,
+        Password: Password
+      }
+    }
+    $http(conf).then(function scb(response) {
+      console.log(response.data);
+      $window.location.href = '/home.html';
+    }, function ecb(response) {
+      console.log(response.data);
+    });
   }
 
 });
