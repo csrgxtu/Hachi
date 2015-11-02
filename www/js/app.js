@@ -37,7 +37,7 @@ angular.module('Login', ['ionic'])
     }
     $http(conf).then(function scb(response) {
       console.log(response.data);
-      $window.location.href = '/home.html';
+      $window.location.href = 'home.html';
     }, function ecb(response) {
       console.log(response.data);
     });
